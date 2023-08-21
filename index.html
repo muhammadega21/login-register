@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs/dist/cdn.min.js"
+    ></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="title mb-5 text-center">
+        <h1 class="font-bold text-2xl md:text-3xl">
+          Lorem ipsum dolor sit amet.
+        </h1>
+      </div>
+      <main class="w-[90%] sm:w-[90%] md:[70%] lg:max-w-[900px] md:flex">
+        <div
+          class="left w-auto pt-1 pb-2 my-auto sm:[50%] md:w-[45%] lg:max-w-[40%]"
+        >
+          <div class="header my-5">
+            <div class="loginLogo">
+              <img src="img/logo.png" alt="" />
+            </div>
+            <h1>Form Login</h1>
+          </div>
+          <div class="form-input mt-10 mb-5 px-5">
+            <form action="" method="">
+              <div class="input-box">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                  required
+                />
+                <i class="bx bx-envelope"></i>
+              </div>
+              <div x-data="{ password: false }" class="input-box">
+                <i
+                  @click="password = !password"
+                  x-bind:class="password ? 'bx bxs-show' : 'bx bxs-hide'"
+                  id="showPassword"
+                ></i>
+                <input
+                  x-bind:type="password ? 'text' : 'password'"
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Password"
+                  required
+                />
+                <i class="bx bxs-lock-alt"></i>
+              </div>
+              <button>Login</button>
+              <div class="action mt-2 flex justify-between">
+                <a class="forgot" href="">Forgot Password?</a>
+                <a class="register" href="register.html">Register</a>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="right img hidden md:block">
+          <div class="waves">
+            <img
+              class="a left-[-90px] top-[80px] md:top-[50px] md:left-[-110px] lg:left-[-145px]"
+              src="img/waves.png"
+              alt=""
+            />
+            <img
+              class="b top-[140px] hidden md:block lg:top-[110px]"
+              src="img/waves.png"
+              alt=""
+            />
+          </div>
+          <div class="image sm:max-w-[350px] md:max-w-[500px] lg:max-w-[550px]">
+            <img src="img/bg.png" alt="" />
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
